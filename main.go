@@ -1,13 +1,14 @@
 package main
 
 import (
+	sort "dsa/sorting"
 	"fmt"
 )
 
 func main() {
 	arr := []int{20, 3, 48, 58, 267, 67}
 	// target := 38
-	// //binary
+	// //binry
 	// index := search.Binarysearch(arr, target)
 	// fmt.Println("index:", index)
 	// if index != -1 {
