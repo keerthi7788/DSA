@@ -27,6 +27,7 @@ func main() {
 	// sort.BubbleSort(arr)
 	// selection sort
 	// sort.SelectionSort(arr)
-
+	//insertion sort
+	sort.InsertionSort(arr)
 	fmt.Println("sorted", arr)
 }
