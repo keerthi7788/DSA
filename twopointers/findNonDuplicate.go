@@ -22,4 +22,9 @@ Constraints:
 -100 <= nums[i] <= 100
 nums is sorted in non-decreasing order.
 */
-func FindingNonDuplicateNumber()
+func FindingNonDuplicateNumber(arr []int)int {
+	
+return 0
+} 
+
+
