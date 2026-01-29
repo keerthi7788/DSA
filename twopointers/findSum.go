@@ -48,15 +48,19 @@ func FindSum(arr []int, target int) []int {
 	// arr:= []int[12,10,4,20,15]
 	left, right := 0, len(arr)-1
 	for left < right {
+		fmt.Println("left:", left, "right:", right)
 		currentsum := arr[left] + arr[right]
+		fmt.Println("sum:", currentsum)
+		if currentsum == target {
+			fmt.Println("Found pair:", arr[left], arr[right])
+			return []int{left, right}
+		}
 		if currentsum < target {
 			left++
 		} else {
 			right--
 		}
-		if currentsum == target {
-			return []int{left, right}
-		}
+
 	}
 	return []int{-1, -1}
 
