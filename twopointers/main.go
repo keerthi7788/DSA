@@ -19,4 +19,8 @@ func main() {
 	}
 	// fmt.Println(result)
 	fmt.Println(k)
+	s := "A man, a plan, a canal: Panama"
+	value := sum.IsPalindrome(s)
+	fmt.Println("is palindrome:", value)
+
 }

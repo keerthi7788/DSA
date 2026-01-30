@@ -83,6 +83,41 @@ l=3 r=3 incremet r
 l=3 r=4 new elemt
 l=4  array ends
 
+Think two-pointer method:
+
+slow → points to last unique element
+
+fast → scans every element
+
+🔹 Step-by-Step Rule
+
+Start:
+
+slow = 0 (first element is always unique)
+
+fast = 1
+
+While scanning (fast):
+
+Compare current with previous (nums[fast] != nums[fast-1])
+
+ If different → new unique number
+
+Copy it to nums[slow+1]
+
+Increment slow
+
+ If same → duplicate
+
+Skip it, just move fast
+
+Repeat until end of array.
+
+ Key Points to Memorize
+Scenario	Action
+nums[fast] == nums[fast-1]	Duplicate → skip, move fast
+nums[fast] != nums[fast-1]	Unique → place at nums[slow+1], increment slow
+
  */
 
 

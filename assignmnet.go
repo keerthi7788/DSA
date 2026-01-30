@@ -1,3 +1,5 @@
+package main
+
 /*
 Two Pointers – Easy
 
