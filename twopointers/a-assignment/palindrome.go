@@ -66,7 +66,11 @@ func IsPalindrome(s string) bool {
 	return true
 }
 
+// isAlphaNumeric checks if a given character is alphanumeric (a-z, A-Z, or 0-9).
 func isAlphaNumeric(c byte) bool {
+	// Check if the character is a lowercase letter (a-z).
+	// Check if the character is an uppercase letter (A-Z).
+	// Check if the character is a digit (0-9).
 	return (c >= 'a' && c <= 'z') ||
 		(c >= 'A' && c <= 'Z') ||
 		(c >= '0' && c <= '9')
@@ -78,4 +82,49 @@ func toLower(c byte) byte {
 		return c + 32
 	}
 	return c
+}
+
+
+/* 2108. Find First Palindromic String in the Array
+Easy
+Topics
+premium lock icon
+Companies
+Hint
+Given an array of strings words, return the first palindromic string in the array. If there is no such string, return an empty string "".
+
+A string is palindromic if it reads the same forward and backward.
+
+ 
+
+Example 1:
+
+Input: words = ["abc","car","ada","racecar","cool"]
+Output: "ada"
+Explanation: The first string that is palindromic is "ada".
+Note that "racecar" is also palindromic, but it is not the first.
+Example 2:
+
+Input: words = ["notapalindrome","racecar"]
+Output: "racecar"
+Explanation: The first and only string that is palindromic is "racecar".
+Example 3:
+
+Input: words = ["def","ghi"]
+Output: ""
+Explanation: There are no palindromic strings, so the empty string is returned.
+ 
+
+Constraints:
+
+1 <= words.length <= 100
+1 <= words[i].length <= 100
+words[i] consists only of lowercase English letters. */
+func FindFirstPalindromicString(words []string) string {
+	for _, word := range words {
+		if IsPalindrome(word) {
+			return word
+		}
+	}
+	return ""
 }

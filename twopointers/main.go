@@ -19,8 +19,11 @@ func main() {
 	}
 	// fmt.Println(result)
 	fmt.Println(k)
-	s := "A man, a plan, a canal: Panama"
+	s := "A man, a planht, a canal: Panama"
 	value := sum.IsPalindrome(s)
 	fmt.Println("is palindrome:", value)
+	words := []string{"abc", "car", "ada", "racecar", "cool"}
+	firstPalindrome := sum.FindFirstPalindromicString(words)
+	fmt.Println("is palindrome:", firstPalindrome)
 
 }
