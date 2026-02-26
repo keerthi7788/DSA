@@ -66,21 +66,21 @@ we can crete a new array
 
 //2-pointer approach
 /*
-1. Initialize two pointers: i and j. Set i to 1 and j to 1.
+1. Initialize two pointers: l and r. Set l to 1 and r to 1.
 [0,0,1,1,1,2,2,3,3,4]
-left=1 -index
+left=1 ----index
 right=1
- we have to move  j always if the j value is same as prevous [j-1]number we need to shift j now need t do any thing , if the j and pevis value is not same we have to  put that j value in left place whre it is pontng the aorted non duplicate array
+ we have to move  r always if the r value is same as prevous [r-1]number we need to shift r now need t do any thing , if the r and pevis value is not same we have to  put that r value in left place whre it is pontng the aorted non duplicate array
 here:
-- l=0 r=0 keep l same incerement j
+- l=0 r=0 keep l same incerement r
 -l=0 r=1 new wlement 
 now l=1 r=1 inceremt r
 l=1 r=1 icement r
 l=1 r=2 new  replce this to to l place 
--l=2 r=2 incremet r
-l=2 r=3 new element shift r valu to l place
-l=3 r=3 incremet r
-l=3 r=4 new elemt
+-l=2 r=2 increment r
+l=2 r=3 new element shift r value to l place
+l=3 r=3 increment r
+l=3 r=4 new element
 l=4  array ends
 
 Think two-pointer method:
