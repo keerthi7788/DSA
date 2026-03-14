@@ -1,7 +1,7 @@
 package main
 
 import (
-	sum "dsa/twopointers/a-assignment"
+	sum "dsa/a-assignment/twoPointers"
 	"fmt"
 )
 
