@@ -44,3 +44,37 @@ func FindMissingNumber(num []int) int {
 	return expected - sum
 
 }
+
+// You can edit this code!
+// Click here and start typing.
+package main
+
+import "fmt"
+
+func main() {
+	num := []int{3, 0, 1, 4, 6, 2, 8}
+	fmt.Println(FindMissingNumber(num))
+
+}
+
+//Question:
+//Array contains numbers 0..n with one missing.
+//Example nums = [3,0,1,2,5]
+//Output = 4
+
+func FindMissingNumber(num []int) []int {
+
+	missing := []int{}
+
+	m := make(map[int]bool)
+	for _, v := range num {
+		m[v] = true
+	}
+	for i := 0; i <= len(num); i++ {
+		if !m[i] {
+			missing = append(missing, i)
+		}
+	}
+	return missing
+
+}
