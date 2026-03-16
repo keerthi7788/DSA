@@ -2,7 +2,6 @@ package strings
 
 import "fmt"
 
-
 //count the cosecutive characters in a string if the achat appera in between and repared the smae again shoud be new.
 
 //s:="AAABBCCAABB"
@@ -35,5 +34,79 @@ func CountCharInString(s string) string {
 	result = result + fmt.Sprintf("%c%d", s[len(s)-1], count)
 
 	return result
+
+}
+
+/*Problem
+
+Input: "AABAABBBAA"
+
+Goal: Find the character with the maximum consecutive repeats.
+
+Output: Character 'B' with count 3 (since 'BBB' is the longest run). */
+
+// func main() {
+// 	s := "A"
+// 	value := CountCharInString(s)
+// 	fmt.Println("Hello", value)
+// }
+
+func CountLongestConsecutive(s string) string {
+	if len(s) == 0 {
+		return ""
+	}
+
+	count := 1
+	maxcount := 1
+
+	char := s[0]
+
+	for i := 1; i < len(s); i++ {
+
+		if s[i] == s[i-1] {
+			count++
+		} else {
+			if count > maxcount {
+				maxcount = count
+				char = s[i-1]
+			}
+			count = 1
+		}
+	}
+
+	// check the last sequence
+	if count > maxcount {
+		maxcount = count
+		char = s[len(s)-1]
+	}
+
+	return fmt.Sprintf("%c%d", char, maxcount)
+}
+
+//	func main() {
+//		s := "ABCACC"
+//		value := CountCharInString(s)
+//		fmt.Println("Hello", value)
+//	}
+//
+// Counte max repated char in a sting
+func CountMaxRepeatedCharInString(s string) string {
+	if len(s) == 0 {
+		return ""
+	}
+	maxcount := 0
+	var ch rune
+	freq := make(map[rune]int)
+	for _, value := range s {
+		freq[value]++
+	}
+	for k, count := range freq {
+		if count > maxcount {
+
+			maxcount = count
+			ch = k
+		}
+	}
+	return fmt.Sprintf("%c%d", ch, maxcount)
 
 }
