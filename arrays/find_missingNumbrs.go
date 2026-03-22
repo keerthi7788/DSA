@@ -1,15 +1,17 @@
-func main() {
-	num := []int{3, 0, 1}
-	fmt.Println(FindMissingNumber(num))
+package main
 
-}
+// func main() {
+// 	num := []int{3, 0, 1}
+// 	fmt.Println(FindMissingNumber(num))
+
+// }
 
 //Question:
 //Array contains numbers 0..n with one missing.
 //Example nums = [3,0,1]
 //Output = 2
 
-func FindMissingNumber(num []int) int {
+func FindMissingNumberUsingXOR(num []int) int {
 	n := len(num)
 	xor := n
 
@@ -23,18 +25,18 @@ func FindMissingNumber(num []int) int {
 // You can edit this code!
 // Click here and start typing
 
-func main() {
-	num := []int{3, 0, 1, 4, 6, 2}
-	fmt.Println(FindMissingNumber(num))
+// func main() {
+// 	num := []int{3, 0, 1, 4, 6, 2}
+// 	fmt.Println(FindMissingNumber(num))
 
-}
+// }
 
 //Question:
 //Array contains numbers 0..n with one missing.
 //Example nums = [3,0,1,2,5]
 //Output = 4
 
-func FindMissingNumber(num []int) int {
+func FindSingleMissingNumber(num []int) int {
 	n := len(num)
 	expected := n * (n + 1) / 2
 	sum := 0
@@ -47,22 +49,19 @@ func FindMissingNumber(num []int) int {
 
 // You can edit this code!
 // Click here and start typing.
-package main
 
-import "fmt"
+// func main() {
+// 	num := []int{3, 0, 1, 4, 6, 2, 8}
+// 	fmt.Println(FindMissingNumber(num))
 
-func main() {
-	num := []int{3, 0, 1, 4, 6, 2, 8}
-	fmt.Println(FindMissingNumber(num))
-
-}
+// }
 
 //Question:
 //Array contains numbers 0..n with one missing.
 //Example nums = [3,0,1,2,5]
 //Output = 4
 
-func FindMissingNumber(num []int) []int {
+func FindMissingNumbers(num []int) []int {
 
 	missing := []int{}
 
