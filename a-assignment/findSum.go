@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /*
 Problem Statement
 Given an array of numbers sorted in ascending order and a target sum, find a pair in the array whose sum is equal to the given target.
@@ -43,16 +41,15 @@ Here is the visual representation of this algorithm for Example-1:
 left[1, 2, 3, 4, 6] right
 */
 func FindSum(arr []int, target int) []int {
-	fmt.Println("Finding pair for target:", target)
 
 	// arr:= []int[12,10,4,20,15]
 	left, right := 0, len(arr)-1
 	for left < right {
-		fmt.Println("left:", left, "right:", right)
+
 		currentsum := arr[left] + arr[right]
-		fmt.Println("sum:", currentsum)
+
 		if currentsum == target {
-			fmt.Println("Found pair:", arr[left], arr[right])
+
 			return []int{left, right}
 		}
 		if currentsum < target {
@@ -64,4 +61,19 @@ func FindSum(arr []int, target int) []int {
 	}
 	return []int{-1, -1}
 
+}
+
+/*
+finding sun of two consecutive numbers equals two target the retuen 1st index
+input: [1, 2, 3, 4, 5], target=5
+output: 1
+Explanation: The numbers at index 1 and 2 add up to 5: 2+3=5
+*/
+func SumOfTwoConsecutiveNumbers(arr []int, target int) int {
+	for i := 0; i < len(arr)-1; i++ {
+		if arr[i]+arr[i+1] == target {
+			return i
+		}
+	}
+	return -1
 }
