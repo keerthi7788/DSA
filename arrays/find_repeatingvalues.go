@@ -1,8 +1,9 @@
-func main() {
-	arr := []int{1, 2, 2, 3, 4, 5, 4}
-	fmt.Println(FindDuplicate(arr))
+package main
+// func main() {
+// 	arr := []int{1, 2, 2, 3, 4, 5, 4}
+// 	fmt.Println(FindDuplicate(arr))
 
-}
+// }
 
 /*
 	many duplicate numbers
