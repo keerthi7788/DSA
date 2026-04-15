@@ -1,4 +1,5 @@
 package main
+
 // func main() {
 // 	arr := []int{1, 2, 2, 3, 4, 5, 4}
 // 	fmt.Println(FindDuplicate(arr))
@@ -19,7 +20,7 @@ func FindDuplicateRepeatedNumbers(arr []int) []int {
 		freq[v]++
 	}
 	for k, value := range freq {
-		if freq[value] != 1 {
+		if value > 1 {
 			duplicate = append(duplicate, k)
 		}
 	}

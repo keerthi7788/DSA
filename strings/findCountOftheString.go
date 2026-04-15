@@ -1,23 +1,20 @@
-/ You can edit this code!
-// Click here and start typing.
-package main
+package strings
 
 import (
-	"fmt"
 	"strings"
 )
 
-func main() {
+// func main() {
 
-	s := "go is fast and go is simple"
+// 	s := "go is fast and go is simple"
 
-	val := CountOccurenceofWord(s)
-	for k, v := range val {
-		fmt.Printf("%s:%d\n", k, v)
+// 	val := CountOccurenceofWord(s)
+// 	for k, v := range val {
+// 		fmt.Printf("%s:%d\n", k, v)
 
-	}
+// 	}
 
-}
+//}
 
 func CountOccurenceofWord(s string) map[string]int {
 	words := strings.Fields(s)
