@@ -1,33 +1,29 @@
 package main
 
 import (
-	sort "dsa/sorting"
+	sum "dsa/twoPointers"
 	"fmt"
 )
 
 func main() {
-	arr := []int{20, 3, 48, 58, 267, 67}
-	// target := 38
-	// //binry
-	// index := search.Binarysearch(arr, target)
-	// fmt.Println("index:", index)
-	// if index != -1 {
-	// 	fmt.Println("found")
-	// } else {
-	// 	fmt.Println("not found")
-	// }
-	// linear search
-	// value := search.LinearSearch(arr, target)
-	// if value != -1 {
-	// 	fmt.Println("found")
-	// } else {
-	// 	fmt.Println("not found")
-	// }
-	// bubble sort
-	// sort.BubbleSort(arr)
-	// selection sort
-	// sort.SelectionSort(arr)
-	//insertion sort
-	sort.InsertionSort(arr)
-	fmt.Println("sorted", arr)
+	fmt.Println("inside main")
+
+	// arr := []int{2, 7, 11, 15}
+	// target := 9
+	// result := FindSum(arr, target)
+	// result := sum.TwoSum(arr, target)
+	dupnum := []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}
+	k := sum.RemoveDuplicatesfromSortedArray(dupnum)
+	for i := 0; i < k; i++ {
+		fmt.Print(dupnum[i], " ")
+	}
+	// fmt.Println(result)
+	fmt.Println(k)
+	s := "A man, a planht, a canal: Panama"
+	value := sum.IsPalindrome(s)
+	fmt.Println("is palindrome:", value)
+	words := []string{"abc", "car", "ada", "racecar", "cool"}
+	firstPalindrome := sum.FindFirstPalindromicString(words)
+	fmt.Println("is palindrome:", firstPalindrome)
+
 }

@@ -1,4 +1,4 @@
-package main
+package pointers
 
 /*
 Problem Statement
@@ -22,9 +22,18 @@ Constraints:
 -100 <= nums[i] <= 100
 nums is sorted in non-decreasing order.
 */
-func FindingNonDuplicateNumber(arr []int)int {
-	
-return 0
-} 
-
-
+func FindingNonDuplicateNumber(arr []int) int {
+	if len(arr) == 0 {
+		return 0
+	}
+	i := 1
+	j := 1
+	for j < len(arr) {
+		if arr[j] != arr[j-1] {
+			arr[i] = arr[j]
+			i++
+		}
+		j++
+	}
+	return i
+}

@@ -1,4 +1,4 @@
-package main
+package pointers
 
 /*
 	You are given:
@@ -37,4 +37,23 @@ func rotateLeft(arr []int, k int) []int {
 	k = k % n
 	return append(arr[k:], arr[:k]...)
 
+}
+
+//correct approach is
+
+func rotateRightInPlace(arr []int, k int) {
+	n := len(arr)
+	k = k % n
+	reverse(arr, 0, n-1)
+	reverse(arr, 0, k-1)
+	reverse(arr, k, n-1)
+
+}
+
+func reverse(arr []int, start, end int) {
+	for start < end {
+		arr[start], arr[end] = arr[end], arr[start]
+		start++
+		end--
+	}
 }
