@@ -1,4 +1,4 @@
-package hasgmap
+package hasgMap
 
 /*
  217. Contains Duplicate

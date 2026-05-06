@@ -2,7 +2,7 @@ package main
 
 // func main() {
 // 	num := []int{3, 0, 1}
-// 	fmt.Println(FindMissingNumber(num))
+// 	fmt.Println(FindSingleMissingNumber(num))
 
 // }
 
@@ -22,19 +22,6 @@ func FindMissingNumberUsingXOR(num []int) int {
 
 }
 
-// You can edit this code!
-// Click here and start typing
-
-// func main() {
-// 	num := []int{3, 0, 1, 4, 6, 2}
-// 	fmt.Println(FindMissingNumber(num))
-
-// }
-
-//Question:
-//Array contains numbers 0..n with one missing.
-//Example nums = [3,0,1,2,5]
-//Output = 4
 
 func FindSingleMissingNumber(num []int) int {
 	n := len(num)
@@ -47,8 +34,6 @@ func FindSingleMissingNumber(num []int) int {
 
 }
 
-// You can edit this code!
-// Click here and start typing.
 
 // func main() {
 // 	num := []int{3, 0, 1, 4, 6, 2, 8}

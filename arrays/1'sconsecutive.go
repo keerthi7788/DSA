@@ -12,7 +12,13 @@ package main
 // Because the longest continuous sequence of 1s is:
 
 // 111
-func Find1sconsicutiveNUmber(arr []int) int {
+
+//	func main() {
+//		arr := []int{0, 1, 1, 0, 1, 1, 1}
+//		second := CountMaxConsicutive(arr)
+//		fmt.Println("second", second)
+//	}
+func Find1sconsicutiveNumber(arr []int) int {
 	count := 0
 	maxcount := 0
 	for i := 0; i < len(arr); i++ {
@@ -28,18 +34,12 @@ func Find1sconsicutiveNUmber(arr []int) int {
 	return maxcount
 }
 
-// func main() {
-// 	arr := []int{0, 1, 1, 0, 1, 1, 1}
-// 	second := CountMaxConsicutive(arr)
-// 	fmt.Println("second", second)
-// }
-
 func CountMaxConsicutive(arr []int) int {
 	count := 0
 	maxcount := 0
 
 	for _, value := range arr {
-		if value == 1 {
+		if value == 0 {
 			count++
 			if count > maxcount {
 				maxcount = count
@@ -63,11 +63,12 @@ func CountMaxConsicutive(arr []int) int {
 
 // Because the longest continuous sequence of 1s is:
 
-// 111
 // func main() {
 // 	s := "0110111"
-// 	second := CountMaxConsicutive(s)
-// 	fmt.Println("second", second)
+// 	result := CountMaxConsicutiveString(s)
+// 	for k, v := range result {
+// 		fmt.Printf("%c:%d\n", k, v)
+// 	}
 // }
 
 func CountMaxConsicutiveString(s string) int {
@@ -88,15 +89,15 @@ func CountMaxConsicutiveString(s string) int {
 
 }
 
-// You can edit this code!
-// Click here and start typing.
+
+//output:
+//  1:5
+// 0:2
 
 // func main() {
-// 	s := "0110111"
-// 	result := CountMaxConsicutive(s)
-// 	for k, v := range result {
-// 		fmt.Printf("%c:%d\n", k, v)
-// 	}
+// 	s := []interface{}{0, 1, 1, 0, 1, 1, 1, "a", "a"}
+// 	result := CountTheRepeatedcountOfEachChar(s)
+// 	fmt.Println(result)
 // }
 
 func CountTheRepeatedcountOfEachChar(s string) map[rune]int {
@@ -111,19 +112,7 @@ func CountTheRepeatedcountOfEachChar(s string) map[rune]int {
 
 }
 
-//output:
-//  1:5
-// 0:2
-
-// You can edit this code!
-// Click here and start typing.
-
-// func main() {
-// 	s := []interface{}{0, 1, 1, 0, 1, 1, 1, "a", "a"}
-// 	result := CountMaxConsicutive(s)
-// 	fmt.Println(result)
-// }
-
+//output :map[a:2 0:2 1:5]
 func CountEachOccurenceofvalue(s []interface{}) map[interface{}]int {
 	count := make(map[interface{}]int)
 
@@ -136,9 +125,6 @@ func CountEachOccurenceofvalue(s []interface{}) map[interface{}]int {
 
 }
 
-//output :map[a:2 0:2 1:5]
-// You can edit this code!
-// Click here and start typing.
 
 //Most frequent element [1,1,2,3,3,3] Output 3Most frequent element [1,1,2,3,3,3] Output 3 lets implet mentthis.
 
@@ -146,7 +132,7 @@ func CountEachOccurenceofvalue(s []interface{}) map[interface{}]int {
 // output: 1
 // func main() {
 // 	arr := []int{0, 1, 1, 0, 2, 2, 2}
-// 	result := CountMaxConsicutive(arr)
+// 	result := CountThehighestRepeatedValue(arr)
 // 	fmt.Println(result)
 // }
 
